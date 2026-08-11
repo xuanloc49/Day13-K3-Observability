@@ -41,10 +41,12 @@
 
 ## 5. Dashboard, SLO và alerts
 
-- Kết quả `validate_dashboard.py`:
-- Evidence dashboard:
-- SLO đã chọn và lý do:
-- Alert rules và runbook:
+- Kết quả `validate_dashboard.py`: `HỢP LỆ: 6/6 panel có trong dashboard contract.`
+- Evidence dashboard: 
+  - `submission/evidence/dashboard_6_panels.png` (Baseline 6 panels chuẩn theo `config/dashboard.yaml`)
+  - `submission/evidence/dashboard_after_rag_slow.png` (Biểu đồ sau khi kích hoạt `rag_slow`, ghi nhận P95 latency vọt lên ~13,260ms, vượt ngưỡng SLO P95 ≤ 3000ms và bật cảnh báo ALERT màu đỏ).
+- SLO đã chọn và lý do: Latency P95 ≤ 3000 ms để đảm bảo trải nghiệm người dùng không bị nghẽn; Error Rate ≤ 2.0% đảm bảo tính ổn định API; Quality Score ≥ 0.75 giữ chất lượng câu trả lời.
+- Alert rules và runbook: Bật cảnh báo khi P95 > 3000ms (kiểm tra RAG retrieval span trong trace), Error Rate > 2%, hoặc Cost > $2.50.
 
 ## 6. Điều tra challenge
 
