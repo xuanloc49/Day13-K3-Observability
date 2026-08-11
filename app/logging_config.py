@@ -23,8 +23,24 @@ class JsonlFileProcessor:
 
 
 
-# Các field cấu trúc thuần (không phải nội dung tự do) không cần scrub.
-_STRUCTURAL_KEYS = {"ts", "level"}
+# Các field cấu trúc/định danh (không phải nội dung tự do) không cần scrub.
+# Quan trọng: những field này là ID hệ thống tự sinh (hex/hash ngẫu nhiên) —
+# nếu quét qua PII regex, shape ngẫu nhiên của chúng có thể trùng passport
+# (1 chữ + 7 số) hoặc CCCD (12 số) và bị redact nhầm, làm hỏng correlation_id
+# thật (đã đo được ~1.5% correlation_id và ~0.5% user_id_hash bị redact nhầm
+# nếu không loại trừ). Field tự do (payload, event, và mọi field lạ khác) vẫn
+# được scrub bình thường.
+_STRUCTURAL_KEYS = {
+    "ts",
+    "level",
+    "correlation_id",
+    "user_id_hash",
+    "session_id",
+    "feature",
+    "model",
+    "env",
+    "service",
+}
 
 
 def _scrub_value(value: Any) -> Any:
