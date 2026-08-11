@@ -1,0 +1,40 @@
+{
+  "id": "6e122576146c87f9e5bb4830fef965b1",
+  "name": "run",
+  "sessionId": "k3-challenge-s04",
+  "userId": "026017618b2c",
+  "metadata": {
+    "prompt_name": "day13-chat",
+    "prompt_label": "production",
+    "prompt_version": "local-v1",
+    "prompt_source": "local-fallback",
+    "doc_count": 1,
+    "query_preview": "Can a customer request a refund after purchase?",
+    "prompt_fetch_error": "LangfuseFallback",
+    "resourceAttributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+      "service.name": "unknown_service"
+    },
+    "scope": {
+      "name": "langfuse-sdk",
+      "version": "3.2.1",
+      "attributes": {
+        "public_key": "[REDACTED]"
+      }
+    }
+  },
+  "input": null,
+  "output": null,
+  "observations": [
+    {
+      "name": "run",
+      "type": "GENERATION",
+      "latency": 3.834,
+      "parentObservationId": null
+    }
+  ],
+  "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/6e122576146c87f9e5bb4830fef965b1"
+}

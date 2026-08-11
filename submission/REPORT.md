@@ -2,66 +2,79 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
-- Repository URL:
-- Commit SHA cuối:
-- Thành viên và vai trò:
+- Tên nhóm: A2
+- Repository URL: https://github.com/xuanloc49/Day13-K3-Observability.git
+- Commit SHA cuối: _(điền sau khi push)_
+- Thành viên và vai trò (theo README repo):
+  - Trần Xuân Lộc — **Logging & PII** (middleware, correlation ID, enrichment) — PR [#1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1)
+  - Đào Ngọc Bích — **Logging & PII** (PII) + prompt versioning evidence — PR [#2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6)
+  - Ngô Tuấn Hưng — **Tracing & Prompt Version**; **Dashboard, SLO & Alert** — PR [#3](https://github.com/xuanloc49/Day13-K3-Observability/pull/3), [#5](https://github.com/xuanloc49/Day13-K3-Observability/pull/5)
+  - Vũ Đức Anh — **Incident, Report & Demo** — PR [#4](https://github.com/xuanloc49/Day13-K3-Observability/pull/4)
 
 ## 2. Kết quả kỹ thuật
 
-- Điểm `validate_logs.py` (baseline CP0, sau khi hoàn thiện PII scrubbing nhưng **trước** khi Member A hoàn thiện middleware/correlation ID ở CP1): **30/100**
-  - Nguồn: 21/21 bản ghi JSON hợp lệ, sinh từ 10 request qua `data/sample_queries.jsonl`.
-  - Breakdown: `-30` thiếu `correlation_id` hợp lệ (đang là `"MISSING"` — chờ CP1 middleware), `-20` thiếu enrichment (`user_id_hash`, `session_id`, `feature`, `model` — chờ CP1 context binding), `-20` correlation ID propagation (<2 ID duy nhất). `PII scrubbing: PASSED` (0 leak).
-  - Mốc đối chiếu: sau khi Member A xong CP1, chạy lại lệnh này để xác nhận điểm tăng lên (kỳ vọng ≥80/100 theo tiêu chí Checkpoint 1).
-- Tổng số traces: **14** trên Langfuse (10 từ `load_test.py` + 4 từ test prompt versioning), verify qua `GET /api/public/traces` (`totalItems: 14`), không chỉ suy luận từ code.
-- Số PII leak còn lại: **0/21** bản ghi (đã test thêm thủ công với email, số điện thoại, số thẻ, CCCD, hộ chiếu và địa chỉ VN có dấu/không dấu — toàn bộ bị redact đúng).
-- Link/đường dẫn dashboard: (chưa có — thuộc CP2, Member C/D phụ trách)
+- Điểm `validate_logs.py`:
+  - Baseline CP0: **30/100** (`submission/evidence/logs_cp0_baseline.jsonl`, `validate_logs_baseline_note.txt`)
+  - Sau Logging & PII (CP1): **100/100** (`submission/evidence/validate_logs.txt`)
+- Tổng số traces: ≥10 load-test + prompt versioning + 5 challenge traces trên Langfuse (xem mục 4 và 6)
+- Số PII leak còn lại: **0** theo validator + kiểm tra thủ công (email/phone/thẻ/CCCD/hộ chiếu/địa chỉ VN)
+- Link/đường dẫn dashboard:
+  - Contract `config/dashboard.yaml` + validator **6/6** (`submission/evidence/validate_dashboard.txt`)
+  - Ảnh: `submission/evidence/dashboard_6_panels.png`, `submission/evidence/dashboard_after_rag_slow.png`
+  - (Streamlit app nhóm D): `scripts/dashboard_app.py`, ảnh phụ `dashboard_6_panels_streamlit.png`
 
 ## 3. Logging và tracing
 
-- Evidence correlation ID:
-- Evidence PII redaction:
-- Evidence trace waterfall:
-- Giải thích một span đáng chú ý:
+- Evidence correlation ID: `submission/evidence/log_correlation_and_enrichment_sample.jsonl`
+- Evidence PII redaction: `submission/evidence/log_pii_redaction_sample.jsonl`
+- Evidence trace waterfall: `submission/evidence/langfuse_trace_waterfall_sample.json`
+  - Challenge sample: `6e122576146c87f9e5bb4830fef965b1` (session `k3-challenge-s04`)
+- Giải thích span: generation `run` ~3.8s khi `rag_slow` — khớp metrics/log; chậm trên đường agent, không phải HTTP 5xx
 
 ## 4. Prompt versioning
 
-- Prompt name: `day13-chat` (type `text`), tạo qua Langfuse API `POST /api/public/v2/prompts`.
-- Version/label baseline: **v1**, labels `baseline` + `production` (ban đầu). Nội dung: `Feature={{feature}}\nDocs={{docs}}\nQuestion={{message}}`.
-- Version/label candidate: **v2**, label `candidate`. Thay đổi nhỏ về format: thêm dòng `Answer in at most 2 concise sentences.` (không đổi 3 biến bắt buộc).
-- Trace ID của mỗi version (cùng input `"What is the refund policy?"`, feature `refund`):
-  - `682b700f5071d0da6a6b01836476d810` — session `sess-baseline` — `prompt_label=baseline`, `prompt_version=1`, `prompt_source=langfuse`, `tokens_in=28`.
-  - `0e2421066147c31d9af798f5377784bf` — session `sess-candidate` — `prompt_label=candidate`, `prompt_version=2`, `prompt_source=langfuse`, `tokens_in=38` (dài hơn do prompt v2 có thêm câu chỉ dẫn).
-- Bằng chứng đổi label / rollback:
-  1. Chuyển `production` từ v1 → v2 qua `PATCH /api/public/v2/prompts/day13-chat/versions/2` (`newLabels: ["candidate", "production"]`) → xác nhận GET `?label=production` trả về `version: 2`.
-  2. Request thật với `LANGFUSE_PROMPT_LABEL=production` sau khi chuyển → trace `7464ee957fc04a5e19eb6dac7f458c34` (session `sess-prod-after-switch`) cho `prompt_label=production`, `prompt_version=2`.
-  3. Rollback `production` về v1 qua `PATCH .../versions/1` (`newLabels: ["baseline", "production"]`) → GET `?label=production` trả về `version: 1`.
-  4. Request thật sau rollback (phải **restart app process** vì SDK cache prompt phía client, `cache_ttl_seconds=60`, không tự invalidate ngay khi label đổi trên server — lưu ý vận hành quan trọng) → trace `ba56b897aa54e760f32be5047a454603` (session `sess-prod-rollback-final`) xác nhận `prompt_label=production`, `prompt_version=1`, `prompt_source=langfuse`.
-- Ghi chú vận hành: đổi label trên Langfuse có hiệu lực **ngay lập tức phía server**, nhưng client (SDK) có thể trả bản cache cũ tới khi cache hết hạn hoặc process được restart — cần tính đến khi rollback prompt trên production thật.
+- Prompt name: `day13-chat` (type `text`)
+- Version/label baseline: **v1** — `baseline` + `production`
+- Version/label candidate: **v2** — `candidate` (+ câu `Answer in at most 2 concise sentences.`)
+- Trace ID (project hiện tại / evidence file `prompt_trace_ids.txt`):
+  - `ed3506b0f82ad1921e2ec0763a1d079e` — `sess-baseline` — label `baseline`, version `1`
+  - `1c287fc4737c7de5f8648b8b853f4b47` — `sess-candidate` — label `candidate`, version `2`
+- Đổi label / rollback:
+  - production→v2: `30a16872ac5e66a801f40e2175f99d10`
+  - production→v1 (fresh process): `9048fc2c8eb071683acf5b2f9e1e6abc`
+- Screenshot UI (PR #6):
+  - `submission/evidence/Prompt_version_lis.png`
+  - `submission/evidence/prompt_traces_baseline_vs_candidate - 1.png`
+  - `submission/evidence/prompt_traces_baseline_vs_candidate - 2.png`
+  - `submission/evidence/prompt_production_rollback_1.png`
+  - `submission/evidence/prompt_production_rollback_2.png`
+- Ghi chú: đổi label trên server có hiệu lực ngay; SDK client có cache (`cache_ttl_seconds=60`) — rollback cần restart process để chắc chắn
 
 ## 5. Dashboard, SLO và alerts
 
-- Kết quả `validate_dashboard.py`: `HỢP LỆ: 6/6 panel có trong dashboard contract.`
-- Evidence dashboard: 
-  - `submission/evidence/dashboard_6_panels.png` (Baseline 6 panels chuẩn theo `config/dashboard.yaml`)
-  - `submission/evidence/dashboard_after_rag_slow.png` (Biểu đồ sau khi kích hoạt `rag_slow`, ghi nhận P95 latency vọt lên ~13,260ms, vượt ngưỡng SLO P95 ≤ 3000ms và bật cảnh báo ALERT màu đỏ).
-- SLO đã chọn và lý do: Latency P95 ≤ 3000 ms để đảm bảo trải nghiệm người dùng không bị nghẽn; Error Rate ≤ 2.0% đảm bảo tính ổn định API; Quality Score ≥ 0.75 giữ chất lượng câu trả lời.
-- Alert rules và runbook: Bật cảnh báo khi P95 > 3000ms (kiểm tra RAG retrieval span trong trace), Error Rate > 2%, hoặc Cost > $2.50.
+- Kết quả `validate_dashboard.py`: **HỢP LỆ: 6/6 panel**
+- Evidence dashboard:
+  - `submission/evidence/dashboard_6_panels.png` — baseline 6 panel theo contract
+  - `submission/evidence/dashboard_after_rag_slow.png` — sau `rag_slow`, P95 tăng rõ / vượt SLO 3000ms
+- SLO (`config/slo.yaml`): latency P95 ≤ 3000ms; error_rate ≤ 2%; daily_cost ≤ 2.5 USD; quality ≥ 0.75
+- Alert/runbook: `config/alert_rules.yaml` + `docs/alerts.md` (HighLatencyP95, HighErrorRate, LowQualityScore)
 
 ## 6. Điều tra challenge
 
-- Challenge ID:
-- Triệu chứng từ metrics:
-- Trace ID liên quan:
-- Log line/correlation ID liên quan:
-- Root cause:
-- Fix action:
-- Preventive measure:
+- Challenge ID: `day13-k3-observability-v1` (incident `rag_slow`, feature `refund`, threshold 2000ms)
+- Triệu chứng metrics (`challenge_metrics.json`): `latency_p95=3833ms`, không có error 5xx — triệu chứng **chậm**
+- Trace IDs: `submission/evidence/challenge_trace_ids.txt` (ví dụ `6e122576146c87f9e5bb4830fef965b1`)
+- Log/CID: `req-4be5226c`, `feature=refund`, `latency_ms=3833` (`challenge_log_line.jsonl`)
+- Root cause: `rag_slow=true` → `app/mock_rag.py` `time.sleep(2.5)` trong `retrieve()`
+- Fix: `POST /incidents/rag_slow/disable`; timeout/fallback retrieve; tách span retrieve/generate
+- Preventive: alert HighLatencyP95; monitor theo feature; không để incident giả lập bật khi demo
+- Demo: `submission/evidence/DEMO_SCRIPT.md`
 
 ## 7. Đóng góp cá nhân
 
-Với mỗi thành viên, ghi rõ nhiệm vụ và link commit/PR tương ứng.
-
 | Thành viên | Phần việc | Commit/PR | Điều đã học |
 |---|---|---|---|
-| | | | |
+| Trần Xuân Lộc | Logging & PII — middleware, correlation ID | [PR #1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1) | |
+| Đào Ngọc Bích | PII + prompt UI evidence | [PR #2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6) | |
+| Ngô Tuấn Hưng | Dashboard/SLO/alert + ảnh runtime | [PR #3](https://github.com/xuanloc49/Day13-K3-Observability/pull/3), [#5](https://github.com/xuanloc49/Day13-K3-Observability/pull/5) | |
+| Vũ Đức Anh | Incident/Report/Demo — challenge, evidence, REPORT | [PR #4](https://github.com/xuanloc49/Day13-K3-Observability/pull/4) | Metrics → traces → logs chứng minh `rag_slow` |

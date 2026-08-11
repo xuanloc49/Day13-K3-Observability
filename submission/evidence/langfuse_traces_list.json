@@ -1,0 +1,797 @@
+[
+  {
+    "id": "6e122576146c87f9e5bb4830fef965b1",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:32:33.514Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "refund"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "026017618b2c",
+    "sessionId": "k3-challenge-s04",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Can a customer request a refund after purchase?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:32:42.000Z",
+    "updatedAt": "2026-08-11T03:32:42.008Z",
+    "observations": [
+      "03c8547102d9ea49"
+    ],
+    "scores": [],
+    "totalCost": 0.002007,
+    "latency": 3.834,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/6e122576146c87f9e5bb4830fef965b1",
+    "externalId": null
+  },
+  {
+    "id": "c1a898de8d5369b8b0b148af42d9576c",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:32:29.923Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "refund"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "026c7a407135",
+    "sessionId": "k3-challenge-s01",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "What is your refund policy?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:32:37.000Z",
+    "updatedAt": "2026-08-11T03:32:36.744Z",
+    "observations": [
+      "7c01c5bc5facb3b8"
+    ],
+    "scores": [],
+    "totalCost": 0.002502,
+    "latency": 3.587,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/c1a898de8d5369b8b0b148af42d9576c",
+    "externalId": null
+  },
+  {
+    "id": "c2906768fc881e43ee7afd9629b9c740",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:32:26.376Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "refund"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "b7fde6ae11b0",
+    "sessionId": "k3-challenge-s03",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Explain the refund window and required evidence.",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:32:32.000Z",
+    "updatedAt": "2026-08-11T03:32:31.477Z",
+    "observations": [
+      "304d58ade606cb05"
+    ],
+    "scores": [],
+    "totalCost": 0.001707,
+    "latency": 3.543,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/c2906768fc881e43ee7afd9629b9c740",
+    "externalId": null
+  },
+  {
+    "id": "25eb7f0592e283a83bd4f5c56ba16b9f",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:32:22.753Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "refund"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "867738e76862",
+    "sessionId": "k3-challenge-s02",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "What proof is required for a refund?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:32:32.000Z",
+    "updatedAt": "2026-08-11T03:32:31.479Z",
+    "observations": [
+      "897bd658fc119fc0"
+    ],
+    "scores": [],
+    "totalCost": 0.001953,
+    "latency": 3.621,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/25eb7f0592e283a83bd4f5c56ba16b9f",
+    "externalId": null
+  },
+  {
+    "id": "387021077e8caf593e1c16ebeb1ffd3a",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:32:19.063Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "refund"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "5da42a0d3d01",
+    "sessionId": "k3-challenge-s05",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Summarize the refund policy for a support agent.",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:32:27.000Z",
+    "updatedAt": "2026-08-11T03:32:26.207Z",
+    "observations": [
+      "3ae46dff238e527c"
+    ],
+    "scores": [],
+    "totalCost": 0.002367,
+    "latency": 3.685,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/387021077e8caf593e1c16ebeb1ffd3a",
+    "externalId": null
+  },
+  {
+    "id": "ed12edf5969766aafa7c487f75a0a785",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:54.987Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "105a9cef3903",
+    "sessionId": "s10",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "How should alerts be designed?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:32:01.000Z",
+    "updatedAt": "2026-08-11T03:32:00.884Z",
+    "observations": [
+      "0a246390058c25f3"
+    ],
+    "scores": [],
+    "totalCost": 0.001419,
+    "latency": 1.116,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/ed12edf5969766aafa7c487f75a0a785",
+    "externalId": null
+  },
+  {
+    "id": "5af557917b6e0a0bb21731c505cba742",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:53.747Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "4d14d5d4f719",
+    "sessionId": "s09",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:56.000Z",
+    "updatedAt": "2026-08-11T03:31:55.646Z",
+    "observations": [
+      "b37e55f9b406f689"
+    ],
+    "scores": [],
+    "totalCost": 0.001518,
+    "latency": 1.235,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/5af557917b6e0a0bb21731c505cba742",
+    "externalId": null
+  },
+  {
+    "id": "b42bfd7bad73e1542ffefe4621e2eadc",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:52.695Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "2f015d970c0b",
+    "sessionId": "s08",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "How do I debug tail latency?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:56.000Z",
+    "updatedAt": "2026-08-11T03:31:55.655Z",
+    "observations": [
+      "df49e63096cad3f9"
+    ],
+    "scores": [],
+    "totalCost": 0.002721,
+    "latency": 1.03,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/b42bfd7bad73e1542ffefe4621e2eadc",
+    "externalId": null
+  },
+  {
+    "id": "4356c5bd75d10752b96b5aba8ad41b01",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:51.589Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "1632c29ecdec",
+    "sessionId": "s07",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "What should not appear in app logs?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:56.000Z",
+    "updatedAt": "2026-08-11T03:31:55.652Z",
+    "observations": [
+      "76be9d5d19b894fe"
+    ],
+    "scores": [],
+    "totalCost": 0.002112,
+    "latency": 1.098,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/4356c5bd75d10752b96b5aba8ad41b01",
+    "externalId": null
+  },
+  {
+    "id": "bbce6e63e933c6018aadf3c5d7c312f9",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:50.330Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "summary"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "4c4f62330d76",
+    "sessionId": "s06",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Give me a short summary of the observability workflow",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:56.000Z",
+    "updatedAt": "2026-08-11T03:31:55.648Z",
+    "observations": [
+      "d91c6421d437d008"
+    ],
+    "scores": [],
+    "totalCost": 0.002055,
+    "latency": 1.254,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/bbce6e63e933c6018aadf3c5d7c312f9",
+    "externalId": null
+  },
+  {
+    "id": "0c8540fc2a082fb1049cc5de41ed10ab",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:49.294Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "64f6ec689229",
+    "sessionId": "s05",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Here is my phone [REDACTED_PHONE_VN], what should be logged?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:56.000Z",
+    "updatedAt": "2026-08-11T03:31:55.650Z",
+    "observations": [
+      "891bce819e9b7eef"
+    ],
+    "scores": [],
+    "totalCost": 0.001539,
+    "latency": 1.026,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/0c8540fc2a082fb1049cc5de41ed10ab",
+    "externalId": null
+  },
+  {
+    "id": "e6dd2adae7dba0ee118fd2fe3bb6412e",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:47.984Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "75af07890985",
+    "sessionId": "s04",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Can I get help with policy and monitoring?",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:56.000Z",
+    "updatedAt": "2026-08-11T03:31:55.643Z",
+    "observations": [
+      "b870696e181e1b62"
+    ],
+    "scores": [],
+    "totalCost": 0.00276,
+    "latency": 1.302,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/e6dd2adae7dba0ee118fd2fe3bb6412e",
+    "externalId": null
+  },
+  {
+    "id": "c564bdba2670998522088f0e280f1dd2",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:46.930Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "summary"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "97ce842ec69d",
+    "sessionId": "s03",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Summarize the monitoring policy for production logging",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:51.000Z",
+    "updatedAt": "2026-08-11T03:31:50.352Z",
+    "observations": [
+      "d8400fd3be2caaff"
+    ],
+    "scores": [],
+    "totalCost": 0.002592,
+    "latency": 1.047,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/c564bdba2670998522088f0e280f1dd2",
+    "externalId": null
+  },
+  {
+    "id": "bf08b49017cb4fd770e4ac2aa2cde669",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:45.786Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "95b6504a8bd6",
+    "sessionId": "s02",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "Explain why metrics traces and logs work together",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:51.000Z",
+    "updatedAt": "2026-08-11T03:31:50.355Z",
+    "observations": [
+      "e8df9df9785a0970"
+    ],
+    "scores": [],
+    "totalCost": 0.002676,
+    "latency": 1.13,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/bf08b49017cb4fd770e4ac2aa2cde669",
+    "externalId": null
+  },
+  {
+    "id": "06e4b6cddbeb4aca604d1119024bb84c",
+    "projectId": "cmso2elth03qcad0d2qa2lowu",
+    "name": "run",
+    "timestamp": "2026-08-11T03:31:44.721Z",
+    "environment": "default",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ],
+    "bookmarked": false,
+    "release": null,
+    "version": null,
+    "userId": "2055254ee30a",
+    "sessionId": "s01",
+    "public": false,
+    "input": null,
+    "output": null,
+    "metadata": {
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "doc_count": 1,
+      "query_preview": "What is your refund policy? My email is [REDACTED_EMAIL]",
+      "prompt_fetch_error": "LangfuseFallback",
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.44.0",
+        "service.instance.id": "91c33aff-5a7f-41b6-a391-8f3035116882",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.2.1",
+        "attributes": {
+          "public_key": "[REDACTED]"
+        }
+      }
+    },
+    "createdAt": "2026-08-11T03:31:51.000Z",
+    "updatedAt": "2026-08-11T03:31:50.414Z",
+    "observations": [
+      "4d52efd1141293e1"
+    ],
+    "scores": [],
+    "totalCost": 0.001593,
+    "latency": 1.056,
+    "htmlPath": "/project/cmso2elth03qcad0d2qa2lowu/traces/06e4b6cddbeb4aca604d1119024bb84c",
+    "externalId": null
+  }
+]
