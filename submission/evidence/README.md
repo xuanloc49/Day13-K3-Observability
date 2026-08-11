@@ -1,6 +1,6 @@
 # Evidence index — nhóm A2
 
-## Từ teammate (đã merge main)
+## Prompt / dashboard UI (đã merge main)
 
 | File | Nguồn |
 |---|---|
@@ -10,7 +10,7 @@
 | `dashboard_6_panels.png` | PR #5 — dashboard baseline |
 | `dashboard_after_rag_slow.png` | PR #5 — dashboard sau rag_slow |
 
-## Từ Incident / Report (nhánh 01191-VuDucAnh)
+## Incident / Report / Demo
 
 | File | Mục đích |
 |---|---|
@@ -22,4 +22,5 @@
 | `prompt_trace_ids.txt` | Trace ID prompt trên project hiện tại |
 | `DEMO_SCRIPT.md` | Demo Metrics → Traces → Logs → Root cause |
 | `dashboard_6_panels_streamlit.png` | Ảnh Streamlit app (`scripts/dashboard_app.py`) |
-| `HUONG_DAN_BO_SUNG_EVIDENCE.md` | Hướng dẫn (đã gần hoàn tất) |
+
+Trạng thái: **đủ evidence theo SUBMISSION.md** (ảnh UI + challenge + validator).

@@ -4,7 +4,7 @@
 
 - Tên nhóm: A2
 - Repository URL: https://github.com/xuanloc49/Day13-K3-Observability.git
-- Commit SHA cuối: `d7d45b8bae348430cdf45318d1c81daaa574734d`
+- Commit SHA cuối: `83e1c720e232c168a1d66b9ce80625a69b20f969`
 - Thành viên và vai trò (theo README repo):
   - Trần Xuân Lộc — **Logging & PII** (middleware, correlation ID, enrichment) — PR [#1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1)
   - Đào Ngọc Bích — **Logging & PII** (PII) + prompt versioning evidence — PR [#2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6)
@@ -74,7 +74,7 @@
 
 | Thành viên | Phần việc | Commit/PR | Điều đã học |
 |---|---|---|---|
-| Trần Xuân Lộc | Logging & PII — middleware, correlation ID | [PR #1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1) | |
-| Đào Ngọc Bích | PII + prompt UI evidence | [PR #2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6) | |
-| Ngô Tuấn Hưng | Dashboard/SLO/alert + ảnh runtime | [PR #3](https://github.com/xuanloc49/Day13-K3-Observability/pull/3), [#5](https://github.com/xuanloc49/Day13-K3-Observability/pull/5) | |
-| Vũ Đức Anh | Incident/Report/Demo — challenge, evidence, REPORT | [PR #4](https://github.com/xuanloc49/Day13-K3-Observability/pull/4) | Metrics → traces → logs chứng minh `rag_slow` |
+| Trần Xuân Lộc | Logging & PII — middleware, correlation ID | [PR #1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1) | Correlation ID phải bind vào structlog contextvars từ middleware; enrichment (`user_id_hash`, `session_id`, `feature`, …) cần gắn trước `request_received` để mọi log cùng request dùng chung context |
+| Đào Ngọc Bích | PII + prompt UI evidence | [PR #2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6) | Redact PII (email/phone/thẻ/CCCD…) trước khi ghi log; trên Langfuse, `prompt_label`/`prompt_version` trên trace phải khớp version đang gắn label — screenshot UI là bằng chứng rollback |
+| Ngô Tuấn Hưng | Dashboard/SLO/alert + ảnh runtime | [PR #3](https://github.com/xuanloc49/Day13-K3-Observability/pull/3), [#5](https://github.com/xuanloc49/Day13-K3-Observability/pull/5) | Dashboard contract 6 panel lấy từ `logs.jsonl`; SLO/threshold (P95 ≤ 3s, error ≤ 2%, …) và alert/runbook giúp phát hiện latency spike trước khi đọc trace |
+| Vũ Đức Anh | Incident/Report/Demo — challenge, evidence, REPORT | [PR #4](https://github.com/xuanloc49/Day13-K3-Observability/pull/4) | Metrics (`latency_p95`) chỉ cho triệu chứng; trace waterfall khoanh generation chậm; log + correlation ID chứng minh root cause `rag_slow` → `sleep(2.5)` trong retrieve |

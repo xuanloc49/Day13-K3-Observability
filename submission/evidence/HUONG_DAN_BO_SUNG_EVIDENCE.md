@@ -1,9 +1,18 @@
-# Hướng dẫn bổ sung evidence còn thiếu — Nhóm A2
+# Hướng dẫn bổ sung evidence — Nhóm A2
 
-Người cần làm: **Đào Ngọc Bích** (Prompt Version UI) và **Ngô Tuấn Hưng** (Dashboard UI).  
-Người nhận file: **Vũ Đức Anh** (gắn vào `submission/evidence/` + cập nhật REPORT / PR #4).
+**Trạng thái: ĐÃ HOÀN TẤT** (ảnh prompt UI PR #6, dashboard PR #5, challenge/REPORT PR #4 đã merge `main`).
 
-Repo: https://github.com/xuanloc49/Day13-K3-Observability  
+Người đã làm: **Đào Ngọc Bích** (Prompt Version UI), **Ngô Tuấn Hưng** (Dashboard UI), **Vũ Đức Anh** (gắn evidence + REPORT).
+
+Repo: https://github.com/xuanloc49/Day13-K3-Observability
+
+---
+
+## Lịch sử yêu cầu (giữ để đối chiếu)
+
+Người cần làm (lúc còn thiếu): **Đào Ngọc Bích** (Prompt Version UI) và **Ngô Tuấn Hưng** (Dashboard UI).  
+Người nhận file: **Vũ Đức Anh**.
+
 Nhánh nộp evidence: gửi ảnh cho Anh **hoặc** push lên nhánh của bạn rồi báo Anh.
 
 ---
@@ -82,4 +91,4 @@ streamlit run scripts/dashboard_app.py
 2. Cập nhật `submission/REPORT.md` mục 4 và 5 (đường dẫn ảnh)
 3. Push nhánh `01191-VuDucAnh` / PR https://github.com/xuanloc49/Day13-K3-Observability/pull/4
 
-Deadline gợi ý: gửi ảnh trước khi nhóm merge PR #4 vào main.
+**Đã xong:** ảnh đã có trong `submission/evidence/`, REPORT đã cập nhật, PR #4 đã merge `main`.
