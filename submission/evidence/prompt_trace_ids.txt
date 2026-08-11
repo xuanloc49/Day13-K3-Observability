@@ -1,0 +1,20 @@
+# Prompt versioning evidence (project hiện tại)
+
+Prompt: `day13-chat` (v1 baseline+production, v2 candidate)
+
+## Trace IDs
+
+| Session | Trace ID | label | version |
+|---|---|---|---|
+| sess-baseline | `ed3506b0f82ad1921e2ec0763a1d079e` | baseline | 1 |
+| sess-candidate | `1c287fc4737c7de5f8648b8b853f4b47` | candidate | 2 |
+| sess-prod-after-switch | `30a16872ac5e66a801f40e2175f99d10` | production | 2 |
+| sess-prod-rollback-fresh | `9048fc2c8eb071683acf5b2f9e1e6abc` | production | 1 |
+
+## UI links (sau khi login EU cloud)
+
+- Prompt: https://cloud.langfuse.com/project/cmso2elth03qcad0d2qa2lowu/prompts/day13-chat
+- Baseline trace: https://cloud.langfuse.com/project/cmso2elth03qcad0d2qa2lowu/traces/ed3506b0f82ad1921e2ec0763a1d079e
+- Candidate trace: https://cloud.langfuse.com/project/cmso2elth03qcad0d2qa2lowu/traces/1c287fc4737c7de5f8648b8b853f4b47
+- After switch: https://cloud.langfuse.com/project/cmso2elth03qcad0d2qa2lowu/traces/30a16872ac5e66a801f40e2175f99d10
+- After rollback: https://cloud.langfuse.com/project/cmso2elth03qcad0d2qa2lowu/traces/9048fc2c8eb071683acf5b2f9e1e6abc

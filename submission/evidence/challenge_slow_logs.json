@@ -1,0 +1,42 @@
+[
+  {
+    "correlation_id": "req-4be5226c",
+    "feature": "refund",
+    "latency_ms": 3833,
+    "session_id": "k3-challenge-s04",
+    "user_id_hash": "026017618b2c",
+    "ts": "2026-08-11T03:32:37.349525Z"
+  },
+  {
+    "correlation_id": "req-5a7e1fff",
+    "feature": "refund",
+    "latency_ms": 3684,
+    "session_id": "k3-challenge-s05",
+    "user_id_hash": "5da42a0d3d01",
+    "ts": "2026-08-11T03:32:22.749777Z"
+  },
+  {
+    "correlation_id": "req-ac04fc3a",
+    "feature": "refund",
+    "latency_ms": 3620,
+    "session_id": "k3-challenge-s02",
+    "user_id_hash": "867738e76862",
+    "ts": "2026-08-11T03:32:26.374313Z"
+  },
+  {
+    "correlation_id": "req-201672dd",
+    "feature": "refund",
+    "latency_ms": 3586,
+    "session_id": "k3-challenge-s01",
+    "user_id_hash": "026c7a407135",
+    "ts": "2026-08-11T03:32:33.511801Z"
+  },
+  {
+    "correlation_id": "req-26a3c623",
+    "feature": "refund",
+    "latency_ms": 3540,
+    "session_id": "k3-challenge-s03",
+    "user_id_hash": "b7fde6ae11b0",
+    "ts": "2026-08-11T03:32:29.919107Z"
+  }
+]
