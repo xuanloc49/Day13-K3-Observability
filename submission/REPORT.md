@@ -4,7 +4,7 @@
 
 - Tên nhóm: A2
 - Repository URL: https://github.com/xuanloc49/Day13-K3-Observability.git
-- Commit SHA cuối: _(điền sau khi push)_
+- Commit SHA cuối: `e7d814fcb6363434cb9f69c1e44061b276c384b7`
 - Thành viên và vai trò (theo README repo):
   - Trần Xuân Lộc — **Logging & PII** (middleware, correlation ID, enrichment) — PR [#1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1)
   - Đào Ngọc Bích — **Logging & PII** (PII) + prompt versioning evidence — PR [#2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6)
