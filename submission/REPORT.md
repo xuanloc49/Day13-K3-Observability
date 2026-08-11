@@ -6,10 +6,10 @@
 - Repository URL: https://github.com/xuanloc49/Day13-K3-Observability.git
 - Commit SHA cuối: `9d3bdda7950e38f4798217857a715d70d3db724c`
 - Thành viên và vai trò (theo README repo):
-  - Trần Xuân Lộc — **Logging & PII** (middleware, correlation ID, enrichment) — PR [#1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1)
-  - Đào Ngọc Bích — **Logging & PII** (PII) + prompt versioning evidence — PR [#2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6)
-  - Ngô Tuấn Hưng — **Tracing & Prompt Version**; **Dashboard, SLO & Alert** — PR [#3](https://github.com/xuanloc49/Day13-K3-Observability/pull/3), [#5](https://github.com/xuanloc49/Day13-K3-Observability/pull/5)
-  - Vũ Đức Anh — **Incident, Report & Demo** — PR [#4](https://github.com/xuanloc49/Day13-K3-Observability/pull/4)
+  - Trần Xuân Lộc - 2A202601671 — **Logging & PII** (middleware, correlation ID, enrichment) — PR [#1](https://github.com/xuanloc49/Day13-K3-Observability/pull/1)
+  - Đào Ngọc Bích - 2A202601745 — **Logging & PII** (PII) + prompt versioning evidence — PR [#2](https://github.com/xuanloc49/Day13-K3-Observability/pull/2), [#6](https://github.com/xuanloc49/Day13-K3-Observability/pull/6)
+  - Ngô Tuấn Hưng - 2A202601409 — **Tracing & Prompt Version**; **Dashboard, SLO & Alert** — PR [#3](https://github.com/xuanloc49/Day13-K3-Observability/pull/3), [#5](https://github.com/xuanloc49/Day13-K3-Observability/pull/5)
+  - Vũ Đức Anh - 2A202601191 — **Incident, Report & Demo** — PR [#4](https://github.com/xuanloc49/Day13-K3-Observability/pull/4)
 
 ## 2. Kết quả kỹ thuật
 
